@@ -15,6 +15,7 @@ export default function EmailSignupForm() {
     setSubmitting(true);
     if (!email.includes("@") || !email.includes(".")) {
       setError("Please enter a valid email address.");
+      setSubmitting(false);
       return;
     }
 
