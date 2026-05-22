@@ -1,14 +1,17 @@
 "use client";
 
-import api from "@/app/_lib/axios";
+import api from "@/lib/api";
 import { Loader } from "lucide-react";
 import { useState } from "react";
+import { useWaitListedCount } from "../_lib/hooks/useWaitlist";
 
 export default function EmailSignupForm() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  const { data, isLoading } = useWaitListedCount();
 
   async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -20,7 +23,7 @@ export default function EmailSignupForm() {
     }
 
     try {
-      const resp = await api.post("/waitlist/join", { email });
+      const resp = await api.post("/v1/waitlist/join", { email });
       if (resp.status != 200 || resp.data.status !== "success") {
         setError("Something went wrong. Please try again later.");
         return;
@@ -69,23 +72,28 @@ export default function EmailSignupForm() {
             setEmail(e.target.value);
             if (error) setError("");
           }}
-          placeholder="your@email.com"
+          placeholder="Enter your email"
           aria-label="Email address"
           className="min-w-0 flex-1 rounded-full border-2 border-sand bg-white px-5 py-3 text-sm text-warm-dark placeholder:text-warm-dark/30 outline-none transition-colors focus:border-terracotta"
           required
         />
         <button
           type="submit"
-          className="rounded-full bg-terracotta px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-terracotta/85 active:scale-95"
+          className="rounded-full bg-fluorescent-fire px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-fluorescent-fire/85 active:scale-95"
         >
           {submitting ? (
             <div className="flex items-center justify-center">
               <Loader className="h-5 w-5 animate-spin" />
             </div>
           ) : (
-            "Notify Me"
+            "Join Waitlist"
           )}
         </button>
+      </div>
+      <div className="mt-6 italic text-sm text-elkhound">
+        {!isLoading && (
+          <span>{`Join ${data} crochet lovers awaiting our launch`}</span>
+        )}
       </div>
       {error && (
         <p role="alert" className="mt-2 pl-5 text-xs text-red-500">

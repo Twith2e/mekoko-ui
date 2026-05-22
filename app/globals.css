@@ -1,21 +1,51 @@
 @import 'tailwindcss';
 
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
+
+@layer utilities {
+  .font-quicksand { font-family: var(--font-quicksand); }
+  .font-garamond { font-family: var(--font-garamond); }
+  .font-sans { font-family: var(--font-sans); }
 }
 
 @theme {
-  --font-sans: 'Quicksand', sans-serif;
-
-  --color-cream: #faf6f0;
+  --color-peaceful-peach: #FFDBCF;
+  --color-darkout: #2D1607;
+  --color-sugar-milk: #FFF8F5;
+  --color-white: #FFFFFF;
+  --color-espresso: #55433C;
   --color-terracotta: #c9715a;
   --color-sage: #7b9e87;
   --color-warm-dark: #3d2b1f;
   --color-sand: #e8d5c4;
   --color-blush: #e8bba8;
   --color-parchment: #f2ebe0;
+  --color-elkhound: #88726B;
+  --color-fluorescent-fire: #974323;
+  --color-strawberry-dust: #FFF1EB;
+}
+
+body {
+  background-color: var(--color-sugar-milk);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translate(-50%, 8px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out forwards;
+}
+
+@keyframes subtle-bounce {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce {
+  animation: subtle-bounce 3s ease-in-out infinite;
 }
