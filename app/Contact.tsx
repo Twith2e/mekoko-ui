@@ -1,6 +1,7 @@
 "use client";
 
-import { Mail, Globe, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+import { BiLogoInstagram } from "react-icons/bi";
 import Link from "next/link";
 
 const contactItems = [
@@ -12,7 +13,7 @@ const contactItems = [
     isMail: true,
   },
   {
-    icon: Globe,
+    icon: BiLogoInstagram,
     label: "INSTAGRAM",
     value: "mekoko.ng",
     isLink: true,
@@ -29,12 +30,12 @@ const contactItems = [
 
 export const Contact = () => {
   return (
-    <div className="bg-peaceful-peach pt-20 px-20 pb-20 flex gap-12 items-start">
-      <div className="w-1/2">
-        <h2 className="font-garamond text-5xl font-medium text-darkout mb-4">
+    <div className="bg-peaceful-peach pt-20 px-3 lg:px-20 pb-20 flex flex-col lg:flex-row gap-12 items-start">
+      <div className="lg:w-1/2">
+        <h2 className="font-garamond lg:text-3xl text-5xl font-medium text-darkout mb-4">
           Get in Touch
         </h2>
-        <p className="font-sans text-espresso text-base mb-10">
+        <p className="font-sans text-espresso text-sm lg:text-base mb-10">
           Have a question about a pattern, or just want to talk yarn? We&apos;d
           love to hear from you.
         </p>
@@ -67,11 +68,15 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="w-1/2 bg-white rounded-3xl p-8 shadow-sm">
+      <div className="lg:w-1/2 bg-white rounded-xl lg:rounded-3xl p-8 shadow-sm">
         <div className="bg-sand/30 border border-sand rounded-2xl px-5 py-3 mb-6">
           <p className="font-sans text-sm text-espresso">
-            Our contact form is coming soon. In the meantime, reach us directly at{" "}
-            <a href="mailto:hellomekoko@gmail.com" className="text-sienna underline underline-offset-2 hover:text-darkout transition-colors">
+            Our contact form is coming soon. In the meantime, reach us directly
+            at{" "}
+            <a
+              href="mailto:hellomekoko@gmail.com"
+              className="text-sienna underline underline-offset-2 hover:text-darkout transition-colors"
+            >
               hellomekoko@gmail.com
             </a>
           </p>
@@ -111,7 +116,10 @@ export const Contact = () => {
             className="w-full border border-sand rounded-xl px-4 py-3 font-sans text-sm text-darkout placeholder:text-sand outline-none resize-none cursor-not-allowed bg-transparent"
           />
         </div>
-        <button disabled className="w-full bg-sienna/40 text-white font-sans text-sm font-medium py-4 rounded-full cursor-not-allowed">
+        <button
+          disabled
+          className="w-full bg-sienna/40 text-white font-sans text-sm font-medium py-4 rounded-full cursor-not-allowed"
+        >
           Send Message
         </button>
       </div>

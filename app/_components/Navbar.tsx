@@ -9,7 +9,7 @@ export const Navbar = () => {
       <h2 className="font-garamond text-fluorescent-fire font-medium text-[2rem]">
         Mekoko
       </h2>
-      <div className="font-garamond text-espresso flex gap-12">
+      <div className="font-garamond text-espresso gap-12 hidden">
         <Link className="hover:text-fluorescent-fire" href="/">
           <span>Shop</span>
         </Link>
@@ -20,7 +20,7 @@ export const Navbar = () => {
           <span>FAQ</span>
         </Link>
       </div>
-      <div className="text-fluorescent-fire flex gap-5">
+      <div className="text-fluorescent-fire hidden gap-5">
         <Link
           className="hover:bg-terracotta hover:text-white h-7 w-7 flex items-center justify-center rounded-full"
           href="/"

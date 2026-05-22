@@ -11,7 +11,7 @@ export default function LandingPage() {
       <header className="fixed w-screen bg-sugar-milk z-50">
         <Navbar />
       </header>
-      <main className="pt-48">
+      <main className="pt-32">
         <Hero />
         <AboutUs />
         <FAQ />

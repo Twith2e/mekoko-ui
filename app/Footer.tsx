@@ -33,14 +33,14 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-peaceful-peach px-20 pt-16 pb-8 relative">
+    <footer className="bg-peaceful-peach px-3 lg:px-20 pt-16 pb-70 md:pb-70 lg:pb-6 relative">
       {toast && (
         <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-darkout text-white font-sans text-sm px-6 py-3 rounded-full shadow-lg animate-fade-in">
           This page is coming soon
         </div>
       )}
 
-      <div className="flex justify-between items-start mb-16">
+      <div className="flex flex-col gap-3 lg:gap-0 lg:flex-row lg:justify-between items-start mb-16">
         <div className="max-w-xs">
           <p className="font-garamond text-3xl font-medium text-sienna mb-4">
             Mekoko
@@ -51,7 +51,7 @@ export const Footer = () => {
           </p>
         </div>
 
-        <div className="flex gap-20">
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-20">
           <div>
             <p className="font-sans text-sm font-semibold text-sienna mb-4">
               Social
