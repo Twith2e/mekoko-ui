@@ -35,8 +35,21 @@ export const FAQ = () => {
                 key={faq.id}
                 value={faq.value}
               >
-                <Accordion.Control>{faq.question}</Accordion.Control>
-                <Accordion.Panel>{faq.answer}</Accordion.Panel>
+                <Accordion.Control
+                  styles={{
+                    label: {
+                      fontFamily: "garamond",
+                      fontSize: 20,
+                      fontWeight: 700,
+                    },
+                  }}
+                >
+                  {faq.question}
+                </Accordion.Control>
+                <Accordion.Panel className="font-sans">
+                  <hr className="border-blush mb-3" />
+                  {faq.answer}
+                </Accordion.Panel>
               </Accordion.Item>
             ))}
           </Accordion>

@@ -29,6 +29,7 @@ export const Hero = () => {
           className="object-cover z-0 rounded-2xl lg:rounded-[4rem] animate-bounce"
           src="/hero-image.png"
           alt="hero-image"
+          loading="eager"
           fill
         />
       </div>
