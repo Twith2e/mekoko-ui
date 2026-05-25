@@ -1,23 +1,24 @@
 import { Navbar } from "./_components/Navbar";
-import { AboutUs } from "./AboutUs";
-import { Contact } from "./Contact";
-import { FAQ } from "./Faq";
-import { Footer } from "./Footer";
-import { Hero } from "./Hero";
+import { Input } from "./ui/Input";
 
-export default function LandingPage() {
+const Page = () => {
   return (
     <div>
-      <header className="fixed w-screen bg-sugar-milk z-50">
-        <Navbar />
-      </header>
-      <main className="pt-32">
-        <Hero />
-        <AboutUs />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
+      <Navbar />
+      <div className="pt-20">
+        <div className="text-center lg:w-[45%] mx-auto">
+          <h2 className="font-garamond font-medium text-5xl text-darkout">
+            The Crochet Collection
+          </h2>
+          <p className="text-xl text-espresso my-6">
+            Heirloom pieces, hand-crafted with unhurried care and the softest
+            yarns
+          </p>
+          <Input />
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Page;
