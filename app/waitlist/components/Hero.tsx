@@ -1,7 +1,7 @@
 "use client";
 
+import EmailSignupForm from "@/app/_components/EmailSignupForm";
 import Image from "next/image";
-import EmailSignupForm from "./_components/EmailSignupForm";
 
 export const Hero = () => {
   return (

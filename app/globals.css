@@ -1,11 +1,19 @@
 @import 'tailwindcss';
 
-
 @layer utilities {
   .font-quicksand { font-family: var(--font-quicksand); }
   .font-garamond { font-family: var(--font-garamond); }
   .font-sans { font-family: var(--font-sans); }
 }
+
+@layer components {
+  .products-filter-heading {
+    @apply mb-6 text-2xl text-fluorescent-fire font-medium;
+    font-family: var(--font-garamond);
+  }
+}
+
+
 
 @theme {
   --color-peaceful-peach: #FFDBCF;
@@ -22,6 +30,8 @@
   --color-elkhound: #88726B;
   --color-fluorescent-fire: #974323;
   --color-strawberry-dust: #FFF1EB;
+  --color-orange-albedo: #FAF9F6;
+  --color-cottagecore-sunset: #FFDAD9;
 }
 
 body {

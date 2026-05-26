@@ -8,9 +8,7 @@ import { FAQ } from "./components/Faq";
 export default function LandingPage() {
   return (
     <div>
-      <header className="fixed w-screen bg-sugar-milk z-50">
-        <Navbar />
-      </header>
+      <Navbar />
       <main className="pt-32">
         <Hero />
         <AboutUs />

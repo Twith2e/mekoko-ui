@@ -1,5 +1,6 @@
 "use client";
 
+import { FAQData } from "@/app/_lib/data";
 import {
   Accordion,
   Container,
@@ -7,7 +8,6 @@ import {
   SimpleGrid,
   Skeleton,
 } from "@mantine/core";
-import { FAQData } from "./_lib/data";
 import Image from "next/image";
 
 const PRIMARY_COL_HEIGHT = "500px";

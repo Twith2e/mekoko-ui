@@ -1,6 +1,6 @@
 "use client";
 
-import { AboutUsData } from "./_lib/data";
+import { AboutUsData } from "@/app/_lib/data";
 import { AboutUsCard } from "./AboutUsCard";
 
 export const AboutUs = () => {
