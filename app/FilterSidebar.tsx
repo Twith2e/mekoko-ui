@@ -4,6 +4,7 @@ import { Checkbox } from "@mantine/core";
 import { ProductColors } from "./_lib/data";
 import { useRouter, useSearchParams } from "next/navigation";
 import { PriceRange } from "./PriceRange";
+import { Titlecase } from "@/lib/utils";
 
 const MIN_PRICE = 0;
 const MAX_PRICE = 2500000;
@@ -50,7 +51,7 @@ export const FilterSidebar = ({
                   }
                   id={color.name}
                 />
-                <label htmlFor={color.name}>{color.name.toUpperCase()}</label>
+                <label htmlFor={color.name}>{Titlecase(color.name)}</label>
               </div>
               <span
                 className="h-4 w-4 rounded-full ring-1 ring-sand"
